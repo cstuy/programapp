@@ -1,19 +1,24 @@
 from flask import Flask,render_template,url_for,redirect
-from flask import session
+from flask import session,request
 
 from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
-app.config['SECRET_KEY']="HELLoWoLW"
+
+app.secret_key="dsfjslfjdlfjdsklf"
 @app.route("/")
 def index():
     return render_template("index.html")
 
 @app.route("/x")
 def x():
-    return "HELLO X"
+    return render_template('index.html')
 
+app.debug=True
 if __name__=="__main__":
     app.debug=True
+    app.config['DEBUG_TB_TEMPLATE_EDITOR_ENABLED']=True
     toolbar = DebugToolbarExtension(app)
+
     app.run(host='0.0.0.0',port=8000)
+    

@@ -29,7 +29,7 @@ app.debug=True
 if __name__=="__main__":
     app.debug=True
     app.config['DEBUG_TB_TEMPLATE_EDITOR_ENABLED']=True
-    toolbar = DebugToolbarExtension(app)
+    #toolbar = DebugToolbarExtension(app)
 
     app.run(host='0.0.0.0',port=8000)
     

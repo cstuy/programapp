@@ -18,7 +18,11 @@ def x():
 def user():
     if request.method=="POST":
         print request.json
-    return json.dumps(True)
+    # this will change the email attribute of the user 
+    # and add an r and an id 
+    return json.dumps({'r':'no worky',
+                       'email':'FOOFOOFFO',
+                       'id':'12345'})
 
 
 app.debug=True

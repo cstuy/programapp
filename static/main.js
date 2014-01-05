@@ -32,8 +32,7 @@ var NewUserView = Backbone.View.extend({
 	    } else {
 	    // Try to create a new user
 	    var user = new UserModel();
-	    console.log('z',formdata);
-	    user.save(formdata,{success: function(d) {console.log(d);}});
+	    user.save(formdata,{success: function(d) {console.log('z',d);}});
 	    }
 	}
     }

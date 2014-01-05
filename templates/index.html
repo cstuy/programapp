@@ -1,7 +1,7 @@
+{% extends "base.html" %}
+ 
+{% block extrahead %}
 
-<html>
-<head>
-    <link rel="stylesheet" href="/static/css/ivory.css" />
 <script type="text/template" id="login_page_template">
 Login or add user
  <a href="#/newuser">Add a user</a>
@@ -35,24 +35,27 @@ Login or add user
 
 <a href="#">Back home</a>
 </script>
+{% endblock %}
 
-  <script src="/static/js/jquery-2.0.3.min.js"></script>
-  <script src="/static/js/underscore-min.js"></script>
-  <script src="/static/js/backbone-min.js"></script>
-  <script src="/static/js/serializeform.js"></script>
-</head>
-<body>
-<h1>Hello</h1>
+{% block body %}
+<div class="row">
+  <div class="c4"></div>
 
-<hr>
+<div class="c4">
+  <h1>TOP MATTER</h1>
+</div>
+</div>
+
+<div class="row">
+  <div class="c2"></div>
+    <div class="c8">
 <div id="content">
 
 </div>
-<hr>
+    </div>
+</div>
 
 
+{% endblock %}
 
-<script src="/static/main.js"></script>
-</body>
-</html>
 

@@ -1,6 +1,6 @@
 from flask import Flask,render_template,url_for,redirect
 from flask import session,request
-
+import json
 from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
@@ -13,6 +13,13 @@ def index():
 @app.route("/x")
 def x():
     return render_template('index.html')
+
+@app.route("/user", methods=["GET","POST","PUT","DELETE"])
+def user():
+    if request.method=="POST":
+        print request.json
+    return json.dumps(True)
+
 
 app.debug=True
 if __name__=="__main__":

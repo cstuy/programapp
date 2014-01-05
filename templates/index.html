@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <link rel="stylesheet" href="/static/css/ivory.css" />
@@ -9,22 +10,22 @@ Login or add user
 <script type="text/template" id="newuser_page_template">
 <div class="row">
 <div class="c8">
-<form class="hform">
+<form class="hform" id="newuserform">
 <%= error %>
 <fieldset>
   <label>Email:</label>
-  <input type="text"></input>
+  <input name="email" type="text"></input>
 </fieldset>
 <fieldset>
   <label>Password:</label>
-  <input type="passsword"></input>
+  <input name="password" type="passsword"></input>
 </fieldset>
 <fieldset>
   <label>Confirm Password:</label>
-  <input type="passsword"></input>
+  <input name="confirmpassword" type="passsword"></input>
 </fieldset>
 <fieldset>
-  <input type="submit" class="button" value="Register">
+  <input type="submit" class="button register" value="Register">
   <input type="submit" class="button back" value="Back">
 
 </fieldset>
@@ -38,7 +39,7 @@ Login or add user
   <script src="/static/js/jquery-2.0.3.min.js"></script>
   <script src="/static/js/underscore-min.js"></script>
   <script src="/static/js/backbone-min.js"></script>
-
+  <script src="/static/js/serializeform.js"></script>
 </head>
 <body>
 <h1>Hello</h1>

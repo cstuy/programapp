@@ -30,7 +30,8 @@ def addUser(email,password):
     res = users.find({'email':email})
     if len([x for x in res])>0:
         return None
-    users.insert({'email':email,'password':password})
+    users.insert({'email':email,'password':password,
+                  'id':email})
     return (username,password)
 
 

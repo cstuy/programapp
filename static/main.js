@@ -42,6 +42,7 @@ var newuserView = new NewUserView();
 
 
 var UserModel = Backbone.Model.extend({
+    idAttribute: "_id", // for transparencey with mongodb
     urlRoot : "/user",
     defaults: {
 	first : '',

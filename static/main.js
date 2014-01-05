@@ -1,5 +1,31 @@
-console.log("HELLO");
 
+
+var LoginView = Backbone.View.extend({
+    el:'#content',
+    template : _.template($("#login_page_template").html()),
+    render: function(){
+	this.$el.html(this.template());
+    }
+})
+var loginView = new LoginView();
+
+
+var NewUserView = Backbone.View.extend({
+    el:'#content',
+    template : _.template($("#newuser_page_template").html()),
+    render: function(data) {
+	console.log(data);
+	if (data==null) {
+	    data={'error':''};
+	}
+	this.$el.html(this.template(data));
+    },
+    events: {
+	'click .back' : function() { appRouter.navigate("/",{trigger:true}); }
+    }
+    
+})
+var newuserView = new NewUserView();
 
 var AppRouter = Backbone.Router.extend({
     routes : {
@@ -7,10 +33,10 @@ var AppRouter = Backbone.Router.extend({
 	'newuser' : 'newuser'
     },
     home : function() {
-	alert("home");
+	loginView.render();
     },
     newuser : function() {
-	alert("newuser");
+	newuserView.render();
     }
     
 })

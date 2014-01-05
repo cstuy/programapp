@@ -1,5 +1,39 @@
 <html>
 <head>
+    <link rel="stylesheet" href="/static/css/ivory.css" />
+<script type="text/template" id="login_page_template">
+Login or add user
+ <a href="#/newuser">Add a user</a>
+</script>
+
+<script type="text/template" id="newuser_page_template">
+<div class="row">
+<div class="c8">
+<form class="hform">
+<%= error %>
+<fieldset>
+  <label>Email:</label>
+  <input type="text"></input>
+</fieldset>
+<fieldset>
+  <label>Password:</label>
+  <input type="passsword"></input>
+</fieldset>
+<fieldset>
+  <label>Confirm Password:</label>
+  <input type="passsword"></input>
+</fieldset>
+<fieldset>
+  <input type="submit" class="button" value="Register">
+  <input type="submit" class="button back" value="Back">
+
+</fieldset>
+</form>
+</div>
+</div>
+
+<a href="#">Back home</a>
+</script>
 
   <script src="/static/js/jquery-2.0.3.min.js"></script>
   <script src="/static/js/underscore-min.js"></script>
@@ -9,13 +43,15 @@
 <body>
 <h1>Hello</h1>
 
+<hr>
+<div id="content">
 
-<h1>Hello</h1>
+</div>
 <hr>
-<hr>
+
+
+
 <script src="/static/main.js"></script>
-<script>
-console.log("HELLO")
-</script>
 </body>
 </html>
+

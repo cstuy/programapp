@@ -21,7 +21,8 @@ var NewUserView = Backbone.View.extend({
 	this.$el.html(this.template(data));
     },
     events: {
-	'click .back' : function() { appRouter.navigate("/",{trigger:true}); }
+	'click .back' : function() { appRouter.navigate("/",{trigger:true});
+				     return false;}
     }
     
 })

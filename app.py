@@ -15,8 +15,10 @@ def x():
     return render_template('index.html')
 
 @app.route("/user", methods=["GET","POST","PUT","DELETE"])
-def user():
+@app.route("/user/<id>", methods=["GET","POST","PUT","DELETE"])
+def user(id=None):
     if request.method=="POST":
+        # Try to create a new user
         print request.json
     # this will change the email attribute of the user 
     # and add an r and an id 
